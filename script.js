@@ -4,8 +4,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    // Replace with your backend API for authentication
-    fetch('/api/login', {
+    fetch('login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -13,7 +12,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            window.location.href = '/dashboard';
+            window.location.href = '/dashboard.php';
         } else {
             document.getElementById('error-message').textContent = 'Invalid username or password';
         }
@@ -21,5 +20,5 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 });
 
 document.getElementById('register-btn').addEventListener('click', function() {
-    window.location.href = '/register';
+    window.location.href = 'register.php';
 });
