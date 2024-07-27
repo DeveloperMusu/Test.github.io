@@ -7,7 +7,7 @@ $password = $data['password'];
 
 // Dummy users array for example (replace with database logic)
 $users = [
-    ['username' => 'user1', 'password' => 'pass1'],
+    ['username' => 'admin', 'password' => 'root'],
     ['username' => 'user2', 'password' => 'pass2']
 ];
 
